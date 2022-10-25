@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="8" failures="1" errors="0" time="1.804">
+  <testsuite name="main.test.js" errors="0" failures="1" skipped="0" timestamp="2022-10-25T15:20:10" time="1.314" tests="8">
+    <testcase classname="&lt;List&gt;" name="renders correctly" time="0.055">
+    </testcase>
+    <testcase classname="sum" name="correctly sums elements of array" time="0.003">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 6
+Received: undefined
+    at Object.&lt;anonymous&gt; (/Users/niharikakanakala/Desktop/platform/main.test.js:29:28)
+    at Object.asyncJestTest (/Users/niharikakanakala/Desktop/platform/node_modules/jest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+    at /Users/niharikakanakala/Desktop/platform/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/niharikakanakala/Desktop/platform/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at /Users/niharikakanakala/Desktop/platform/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:75:41
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)</failure>
+    </testcase>
+    <testcase classname="&lt;TransactionItem&gt;" name="renders correctly income type" time="0.004">
+    </testcase>
+    <testcase classname="&lt;TransactionItem&gt;" name="renders correctly expense type" time="0.002">
+    </testcase>
+    <testcase classname="&lt;TransactionItem&gt;" name="calls onDeleteClick with transaction id" time="0.073">
+    </testcase>
+    <testcase classname="&lt;Form&gt;" name="renders correctly" time="0.019">
+    </testcase>
+    <testcase classname="&lt;Form&gt;" name="calls the onSubmit function with the form values" time="0.073">
+    </testcase>
+    <testcase classname="&lt;Form&gt;" name="doesn&apos;t call onSubmit when ref.current is null" time="0.009">
+    </testcase>
+  </testsuite>
+</testsuites>
