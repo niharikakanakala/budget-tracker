@@ -1,32 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="8" failures="1" errors="0" time="1.804">
-  <testsuite name="main.test.js" errors="0" failures="1" skipped="0" timestamp="2022-10-25T15:20:10" time="1.314" tests="8">
-    <testcase classname="&lt;List&gt;" name="renders correctly" time="0.055">
+<testsuites name="jest tests" tests="6" failures="5" errors="0" time="2.178">
+  <testsuite name="sample.test.js" errors="0" failures="0" skipped="0" timestamp="2022-10-26T08:44:10" time="0.605" tests="1">
+    <testcase classname="frontend sample tests" name="should always be used run some simple test or the candidate should be allowed to modify sample.test.js file" time="0.002">
     </testcase>
-    <testcase classname="sum" name="correctly sums elements of array" time="0.003">
+  </testsuite>
+  <testsuite name="main.test.js" errors="0" failures="5" skipped="0" timestamp="2022-10-26T08:44:10" time="1.48" tests="5">
+    <testcase classname="sum" name="correctly sums elements of array" time="0.006">
       <failure>Error: expect(received).toBe(expected) // Object.is equality
 
 Expected: 6
 Received: undefined
-    at Object.&lt;anonymous&gt; (/Users/niharikakanakala/Desktop/platform/main.test.js:29:28)
-    at Object.asyncJestTest (/Users/niharikakanakala/Desktop/platform/node_modules/jest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
-    at /Users/niharikakanakala/Desktop/platform/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+    at Object.&lt;anonymous&gt; (/Users/niharikakanakala/budget-tracker/main.test.js:16:28)
+    at Object.asyncJestTest (/Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+    at /Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:45:12
     at new Promise (&lt;anonymous&gt;)
-    at mapper (/Users/niharikakanakala/Desktop/platform/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
-    at /Users/niharikakanakala/Desktop/platform/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:75:41
+    at mapper (/Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at /Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:75:41
     at processTicksAndRejections (internal/process/task_queues.js:95:5)</failure>
     </testcase>
-    <testcase classname="&lt;TransactionItem&gt;" name="renders correctly income type" time="0.004">
+    <testcase classname="&lt;TransactionItem&gt;" name="calls onDeleteClick with transaction id" time="0.155">
+      <failure>TestingLibraryElementError: Unable to find an accessible element with the role &quot;button&quot;
+
+Here are the accessible roles:
+
+  listitem:
+
+  Name &quot;&quot;:
+  &lt;li
+    class=&quot;sc-bcXHqe dUKdoi&quot;
+  /&gt;
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;li
+      class=&quot;sc-bcXHqe dUKdoi&quot;
+    &gt;
+      &lt;div
+        class=&quot;sc-dkrFOg jhuAHt&quot;
+      &gt;
+        Apple
+      &lt;/div&gt;
+      &lt;div
+        class=&quot;sc-gswNZR kAGNST&quot;
+      &gt;
+        - 
+        $10.00
+      &lt;/div&gt;
+      //Implement &quot;Button&quot; functionality so that specific item should get deleted when Button is clicked. //Inclue the CrossIcon in the Button as DeleteButton.
+    &lt;/li&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+    at Object.getElementError (/Users/niharikakanakala/budget-tracker/node_modules/@testing-library/dom/dist/config.js:40:19)
+    at /Users/niharikakanakala/budget-tracker/node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+    at /Users/niharikakanakala/budget-tracker/node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+    at getByRole (/Users/niharikakanakala/budget-tracker/node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+    at Object.&lt;anonymous&gt; (/Users/niharikakanakala/budget-tracker/main.test.js:37:28)
+    at Object.asyncJestTest (/Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+    at /Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at /Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:75:41
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)</failure>
     </testcase>
-    <testcase classname="&lt;TransactionItem&gt;" name="renders correctly expense type" time="0.002">
+    <testcase classname="&lt;List&gt;" name="renders correctly" time="0.006">
+      <failure>TestingLibraryElementError: Unable to find an element with the text: /salary/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;ul
+      class=&quot;sc-eDvSVe haUxEu&quot;
+    /&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+    at Object.getElementError (/Users/niharikakanakala/budget-tracker/node_modules/@testing-library/dom/dist/config.js:40:19)
+    at /Users/niharikakanakala/budget-tracker/node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+    at /Users/niharikakanakala/budget-tracker/node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+    at getByText (/Users/niharikakanakala/budget-tracker/node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+    at Object.&lt;anonymous&gt; (/Users/niharikakanakala/budget-tracker/main.test.js:52:19)
+    at Object.asyncJestTest (/Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+    at /Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at /Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:75:41
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)</failure>
     </testcase>
-    <testcase classname="&lt;TransactionItem&gt;" name="calls onDeleteClick with transaction id" time="0.073">
-    </testcase>
-    <testcase classname="&lt;Form&gt;" name="renders correctly" time="0.019">
-    </testcase>
-    <testcase classname="&lt;Form&gt;" name="calls the onSubmit function with the form values" time="0.073">
+    <testcase classname="&lt;Form&gt;" name="calls the onSubmit function with the form values" time="0.174">
+      <failure>Error: expect(jest.fn()).toBeCalledWith(...expected)
+
+Expected: {&quot;description&quot;: &quot;Ticket to the Moon&quot;, &quot;id&quot;: 1, &quot;type&quot;: &quot;expense&quot;, &quot;value&quot;: 9.99}
+
+Number of calls: 0
+    at Object.&lt;anonymous&gt; (/Users/niharikakanakala/budget-tracker/main.test.js:90:22)
+    at Object.asyncJestTest (/Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+    at /Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at /Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:75:41
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)</failure>
     </testcase>
     <testcase classname="&lt;Form&gt;" name="doesn&apos;t call onSubmit when ref.current is null" time="0.009">
+      <failure>Error: expect(jest.fn()).toBeCalled()
+
+Expected number of calls: &gt;= 1
+Received number of calls:    0
+    at Object.&lt;anonymous&gt; (/Users/niharikakanakala/budget-tracker/main.test.js:120:22)
+    at Object.asyncJestTest (/Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+    at /Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at /Users/niharikakanakala/budget-tracker/node_modules/jest/node_modules/jest-jasmine2/build/queueRunner.js:75:41
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)</failure>
     </testcase>
   </testsuite>
 </testsuites>

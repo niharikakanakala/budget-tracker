@@ -8,18 +8,10 @@ const List  = styled.ul `
 
 
 const TransactionList = ({ list, onDeleteClick }) => {
+  //Map the "list" such that it returns the TransactionItem component with onDeleteClick with id.
     return (
       <List>
-        {list.map(({ id, description, value, type }) => (
-          <TransactionItem
-            key={id}
-            id={id}
-            type={type}
-            value={value}
-            description={description}
-            onDeleteClick={onDeleteClick}
-          />
-        ))}
+        
       </List>
     );
   }

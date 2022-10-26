@@ -24,12 +24,10 @@ const Value = styled.div `
       margin-right: 1rem;
       transition: transform 300ms;
       &:hover {
-  
-     
         transform: translateX(-20px);
-     
-    }
+      }
 `;
+
 const Description = styled.div `
       flex: 1;
       padding: 0.5rem;
@@ -61,9 +59,8 @@ const TransactionItem = ({
           {currencyFormat(value)}
         </Value>
   
-        <Button onClick={() => onDeleteClick(id)}>
-          <CrossIcon />
-        </Button>
+  //Implement "Button" functionality so that specific item should get deleted when Button is clicked.
+  //Inclue the CrossIcon in the Button as DeleteButton.
       </TransactionItemStyle>
     );
   }

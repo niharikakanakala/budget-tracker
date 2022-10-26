@@ -66,23 +66,14 @@ function Form({ onSubmit }) {
     const [description, setDescription] = React.useState('');
     const [value, setValue] = React.useState('');
   
+    //Complete the handleSumit function
     const handleSubmit = (e) => {
-      e.preventDefault();
-  
-      if (!descriptionRef.current) return;
   
       // Submit the form
-      onSubmit({
-        id: nanoid(),
-        type,
-        description,
-        value: Number(value),
-      });
-  
+      //calls the onSubmit function with the form values
       // Reset form values and set focus on description
-      setDescription('');
-      setValue('');
-      descriptionRef.current.focus();
+      //doesn't call onSubmit when ref.current is null
+     
     };
   
     

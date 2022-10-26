@@ -10,19 +10,6 @@ import { Form } from './src/components/form/form';
 
 
 
-const incomeList = [
-  { id: 'a', type: 'income', description: 'Salary', value: 999 },
-  { id: 'b', type: 'income', description: 'Lottery', value: 10000 },
-];
-
-describe('<List>', () => {
-  it('renders correctly', () => {
-    render(<TransactionList list={incomeList} onDeleteClick={() => {}} />);
-
-    expect(screen.getByText(/salary/i)).toBeInTheDocument();
-    expect(screen.getByText(/lottery/i)).toBeInTheDocument();
-  });
-});
 
 describe('sum', () => {
   it('correctly sums elements of array', () => {
@@ -34,35 +21,6 @@ describe('sum', () => {
 
 
 describe('<TransactionItem>', () => {
-  test('renders correctly income type', () => {
-    render(
-      <TransactionItem
-        id="1"
-        description="Apple"
-        value={10}
-        type="income"
-        onDeleteClick={jest.fn()}
-      />
-    );
-
-    expect(screen.getByText('Apple')).toBeInTheDocument();
-    expect(screen.getByText('+ $10.00')).toBeInTheDocument();
-  });
-
-  test('renders correctly expense type', () => {
-    render(
-      <TransactionItem
-        id="1"
-        description="Apple"
-        value={10}
-        type="expense"
-        onDeleteClick={jest.fn()}
-      />
-    );
-
-    expect(screen.getByText('Apple')).toBeInTheDocument();
-    expect(screen.getByText('- $10.00')).toBeInTheDocument();
-  });
 
   test('calls onDeleteClick with transaction id', () => {
     const onDeleteClick = jest.fn();
@@ -82,6 +40,20 @@ describe('<TransactionItem>', () => {
   });
 });
 
+const incomeList = [
+  { id: 'a', type: 'income', description: 'Salary', value: 999 },
+  { id: 'b', type: 'income', description: 'Lottery', value: 10000 },
+];
+
+describe('<List>', () => {
+  it('renders correctly', () => {
+    render(<TransactionList list={incomeList} onDeleteClick={() => {}} />);
+
+    expect(screen.getByText(/salary/i)).toBeInTheDocument();
+    expect(screen.getByText(/lottery/i)).toBeInTheDocument();
+  });
+});
+
 //form
 jest.mock('nanoid', () => ({
   nanoid: () => {
@@ -91,12 +63,6 @@ jest.mock('nanoid', () => ({
 }));
 
 describe('<Form>', () => {
-  it('renders correctly', () => {
-    const { getByPlaceholderText } = render(<Form onSubmit={() => {}} />);
-
-    expect(screen.getByPlaceholderText(/add description/i)).toBeInTheDocument();
-    expect(screen.getByPlaceholderText(/value/i)).toBeInTheDocument();
-  });
 
   it('calls the onSubmit function with the form values', () => {
     const onSubmit = jest.fn();
